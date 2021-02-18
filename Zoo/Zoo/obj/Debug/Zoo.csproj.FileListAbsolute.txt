@@ -1,0 +1,13 @@
+C:\Users\Григорий\source\repos\Zoo\Zoo\bin\Debug\Zoo.exe.config
+C:\Users\Григорий\source\repos\Zoo\Zoo\bin\Debug\Zoo.exe
+C:\Users\Григорий\source\repos\Zoo\Zoo\bin\Debug\Zoo.pdb
+C:\Users\Григорий\source\repos\Zoo\Zoo\obj\Debug\Zoo.csprojAssemblyReference.cache
+C:\Users\Григорий\source\repos\Zoo\Zoo\obj\Debug\Zoo.Properties.Resources.resources
+C:\Users\Григорий\source\repos\Zoo\Zoo\obj\Debug\Zoo.csproj.GenerateResource.cache
+C:\Users\Григорий\source\repos\Zoo\Zoo\obj\Debug\Zoo.csproj.CoreCompileInputs.cache
+C:\Users\Григорий\source\repos\Zoo\Zoo\obj\Debug\Zoo.exe
+C:\Users\Григорий\source\repos\Zoo\Zoo\obj\Debug\Zoo.pdb
+C:\Users\Григорий\source\repos\Zoo\Zoo\obj\Debug\Zoo.Forms.AuthorizationForm.resources
+C:\Users\Григорий\source\repos\Zoo\Zoo\obj\Debug\Zoo.Forms.DirectorForm.resources
+C:\Users\Григорий\source\repos\Zoo\Zoo\obj\Debug\Zoo.Forms.ViewAnimals.resources
+C:\Users\Григорий\source\repos\Zoo\Zoo\obj\Debug\Zoo.Forms.ViewSotr.resources
