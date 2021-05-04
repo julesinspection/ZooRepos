@@ -27,18 +27,4 @@ namespace Zoo.Data
 
 
     }
-
-    //class UserAData
-    //{  
-    //    public List<User> Users
-    //    {
-    //        get
-    //        {
-    //            return new List<User>
-    //            {
-    //                new User{login = "dir", password = "1234", post = "director"}
-    //            };
-    //        }
-    //    }
-    //}
 }

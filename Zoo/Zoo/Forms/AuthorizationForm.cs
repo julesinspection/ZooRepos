@@ -18,6 +18,8 @@ namespace Zoo.Forms
             InitializeComponent();
         }
 
+        public static int countTries = 0;
+
         private void button1_Click(object sender, EventArgs e)
         {
             AData log = new AData();
@@ -27,18 +29,25 @@ namespace Zoo.Forms
             {
                 case "director":
                     DirectorForm f1 = new DirectorForm();
+                    countTries = 0;
                     f1.Show();                   
                     break;
                 case "sotr":
                     SotrForm f2 = new SotrForm();
+                    countTries = 0;
                     f2.Show();
                     break;
-                case "dir":
+                case "vet":
                     VetForm f3 = new VetForm();
+                    countTries = 0;
                     f3.Show();
                     break;
                 case "none":
-                    MessageBox.Show("Неверный логин или пароль");
+                    countTries++;
+                    MessageBox.Show("Неверный логин или пароль, осталось попыток: " + (3 - countTries));
+                    if (countTries == 3) {
+                        Application.Exit();
+                    }
                     break;
             }
         }

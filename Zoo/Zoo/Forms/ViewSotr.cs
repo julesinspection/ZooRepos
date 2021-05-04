@@ -34,8 +34,7 @@ namespace Zoo.Forms
 
         private void button1_Click(object sender, EventArgs e)
         {
-            System.Windows.Forms.DataGridViewColumn Col =
- default(System.Windows.Forms.DataGridViewColumn);
+            System.Windows.Forms.DataGridViewColumn Col = default(System.Windows.Forms.DataGridViewColumn);
             switch (listBox1.SelectedIndex)
             {
                 case 0:
@@ -87,7 +86,8 @@ namespace Zoo.Forms
         }
         private void button3_Click(object sender, EventArgs e)
         {
-            sotrudnikBindingSource.Filter = "";
+            sotrudnikBindingSource.Filter = " ";
         }
+
     }
 }

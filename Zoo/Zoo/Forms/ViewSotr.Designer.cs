@@ -266,6 +266,7 @@
             this.button3.TabIndex = 17;
             this.button3.Text = "Показать всех";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // ViewSotr
             // 
@@ -285,9 +286,12 @@
             this.Controls.Add(this.sotrudnikDataGridView);
             this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.HelpButton = true;
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(5);
+            this.MaximizeBox = false;
             this.Name = "ViewSotr";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ViewSotr";
             this.Load += new System.EventHandler(this.ViewSotr_Load);
             ((System.ComponentModel.ISupportInitialize)(this.zooDataSet)).EndInit();

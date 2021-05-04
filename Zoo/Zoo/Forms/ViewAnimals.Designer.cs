@@ -146,42 +146,49 @@
             this.dataGridViewTextBoxColumn1.DataPropertyName = "NomerJiv";
             this.dataGridViewTextBoxColumn1.HeaderText = "NomerJiv";
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn2
             // 
             this.dataGridViewTextBoxColumn2.DataPropertyName = "KlichkaJiv";
             this.dataGridViewTextBoxColumn2.HeaderText = "KlichkaJiv";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn3
             // 
             this.dataGridViewTextBoxColumn3.DataPropertyName = "NomerValera";
             this.dataGridViewTextBoxColumn3.HeaderText = "NomerValera";
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn4
             // 
             this.dataGridViewTextBoxColumn4.DataPropertyName = "VidJivotnogo";
             this.dataGridViewTextBoxColumn4.HeaderText = "VidJivotnogo";
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn5
             // 
             this.dataGridViewTextBoxColumn5.DataPropertyName = "PolJivotnogo";
             this.dataGridViewTextBoxColumn5.HeaderText = "PolJivotnogo";
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn6
             // 
             this.dataGridViewTextBoxColumn6.DataPropertyName = "VozrastJivotnogo";
             this.dataGridViewTextBoxColumn6.HeaderText = "VozrastJivotnogo";
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn7
             // 
             this.dataGridViewTextBoxColumn7.DataPropertyName = "NomerKorma";
             this.dataGridViewTextBoxColumn7.HeaderText = "NomerKorma";
             this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.ReadOnly = true;
             // 
             // label1
             // 
@@ -191,7 +198,6 @@
             this.label1.TabIndex = 3;
             this.label1.Text = "Сортировка";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // listBox1
             // 
@@ -209,7 +215,6 @@
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(227, 144);
             this.listBox1.TabIndex = 4;
-            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
             // radioButton1
             // 
@@ -221,7 +226,6 @@
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "по возрастанию";
             this.radioButton1.UseVisualStyleBackColor = true;
-            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
             // radioButton2
             // 
@@ -233,7 +237,6 @@
             this.radioButton2.TabStop = true;
             this.radioButton2.Text = "по убыванию";
             this.radioButton2.UseVisualStyleBackColor = true;
-            this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
             // 
             // button1
             // 
@@ -293,6 +296,7 @@
             this.button3.TabIndex = 18;
             this.button3.Text = "Показать всех";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // ViewAnimals
             // 
@@ -314,7 +318,9 @@
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(5);
+            this.MaximizeBox = false;
             this.Name = "ViewAnimals";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Животные";
             this.Load += new System.EventHandler(this.ViewAnimals_Load);
             this.menuStrip1.ResumeLayout(false);

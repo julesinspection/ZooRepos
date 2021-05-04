@@ -34,8 +34,7 @@ namespace Zoo.Forms
 
         private void button1_Click(object sender, EventArgs e)
         {
-            System.Windows.Forms.DataGridViewColumn Col =
- default(System.Windows.Forms.DataGridViewColumn);
+            System.Windows.Forms.DataGridViewColumn Col = default(System.Windows.Forms.DataGridViewColumn);
             switch (listBox1.SelectedIndex)
             {
                 case 0:
@@ -71,26 +70,6 @@ namespace Zoo.Forms
             Close();
         }
 
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void radioButton1_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void radioButton2_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void button2_Click(object sender, EventArgs e)
         {
             switch (listBox2.SelectedIndex)
@@ -107,14 +86,13 @@ namespace Zoo.Forms
                 case 3:
                     jivotnoeBindingSource.Filter = "VidJivotnogo Like '" + textBox1.Text + "%'";
                     break;
-                
             }
             
 
         }
         private void button3_Click(object sender, EventArgs e)
         {
-            jivotnoeBindingSource.Filter = "";
+            jivotnoeBindingSource.Filter = " ";
         }
     }
 }
