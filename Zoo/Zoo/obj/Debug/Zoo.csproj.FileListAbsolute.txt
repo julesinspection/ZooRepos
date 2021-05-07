@@ -26,3 +26,11 @@ C:\Users\Григорий\source\repos\ZooRepos\Zoo\Zoo\obj\Debug\Zoo.csproj.Gen
 C:\Users\Григорий\source\repos\ZooRepos\Zoo\Zoo\obj\Debug\Zoo.csproj.CoreCompileInputs.cache
 C:\Users\Григорий\source\repos\ZooRepos\Zoo\Zoo\obj\Debug\Zoo.exe
 C:\Users\Григорий\source\repos\ZooRepos\Zoo\Zoo\obj\Debug\Zoo.pdb
+C:\Users\Григорий\source\repos\ZooRepos\Zoo\Zoo\obj\Debug\Zoo.Forms.EditSotr.resources
+C:\Users\Григорий\source\repos\ZooRepos\Zoo\Zoo\obj\Debug\Zoo.Forms.AllSotr.resources
+C:\Users\Григорий\source\repos\ZooRepos\Zoo\Zoo\obj\Debug\Zoo.Forms.EditAnimals.resources
+C:\Users\Григорий\source\repos\ZooRepos\Zoo\Zoo\obj\Debug\Zoo.Forms.AllAnimals.resources
+C:\Users\Григорий\source\repos\ZooRepos\Zoo\Zoo\obj\Debug\Zoo.Forms.EditCorm.resources
+C:\Users\Григорий\source\repos\ZooRepos\Zoo\Zoo\obj\Debug\Zoo.Forms.ViewCorm.resources
+C:\Users\Григорий\source\repos\ZooRepos\Zoo\Zoo\obj\Debug\Zoo.Forms.EditPotomstvo.resources
+C:\Users\Григорий\source\repos\ZooRepos\Zoo\Zoo\obj\Debug\Zoo.Forms.EditBolezni.resources

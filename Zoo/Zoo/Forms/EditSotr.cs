@@ -9,8 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Zoo.Forms {
-    public partial class ViewSotr : Form {
-        public ViewSotr()
+    public partial class EditSotr : Form {
+        public EditSotr()
         {
             InitializeComponent();
         }
@@ -20,10 +20,11 @@ namespace Zoo.Forms {
             this.Validate();
             this.sotrudnikBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.zooDataSet);
+            MessageBox.Show("Данные о сотруднике сохранены");
 
         }
 
-        private void ViewSotr_Load(object sender, EventArgs e)
+        private void EditSotr_Load(object sender, EventArgs e)
         {
             // TODO: данная строка кода позволяет загрузить данные в таблицу "zooDataSet.RabotaSJivotnim". При необходимости она может быть перемещена или удалена.
             this.rabotaSJivotnimTableAdapter.Fill(this.zooDataSet.RabotaSJivotnim);

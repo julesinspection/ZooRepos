@@ -37,21 +37,30 @@ namespace Zoo.Forms
 
         }
 
-        private void животныеToolStripMenuItem_Click(object sender, EventArgs e)
+        private void закрытьToolStripMenuItem_Click(object sender, EventArgs e) => Close();
+
+        private void button2_Click(object sender, EventArgs e)
         {
-            ViewAnimals f = new ViewAnimals();
-            f.Show();
+            AllAnimals form = new AllAnimals();
+            form.Show();
         }
 
-        private void закрытьToolStripMenuItem_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-            Close();
+            AllSotr form = new AllSotr();
+            form.Show();
         }
 
-        private void сотрудникиToolStripMenuItem_Click(object sender, EventArgs e)
+        private void button3_Click(object sender, EventArgs e)
         {
-            ViewSotr f = new ViewSotr();
-            f.Show();
+            EditSotr form = new EditSotr();
+            form.Show();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            ViewSotr form = new ViewSotr();
+            form.Show();
         }
     }
 }

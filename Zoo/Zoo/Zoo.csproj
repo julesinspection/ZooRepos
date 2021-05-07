@@ -59,6 +59,36 @@
     <Compile Include="Forms\DirectorForm.Designer.cs">
       <DependentUpon>DirectorForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\EditAnimals.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EditAnimals.Designer.cs">
+      <DependentUpon>EditAnimals.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EditBolezni.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EditBolezni.Designer.cs">
+      <DependentUpon>EditBolezni.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EditCorm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EditCorm.Designer.cs">
+      <DependentUpon>EditCorm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EditPotomstvo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EditPotomstvo.Designer.cs">
+      <DependentUpon>EditPotomstvo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EditSotr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EditSotr.Designer.cs">
+      <DependentUpon>EditSotr.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\SotrForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -71,11 +101,29 @@
     <Compile Include="Forms\VetForm.Designer.cs">
       <DependentUpon>VetForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\AllAnimals.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AllAnimals.Designer.cs">
+      <DependentUpon>AllAnimals.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AllSotr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AllSotr.Designer.cs">
+      <DependentUpon>AllSotr.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\ViewAnimals.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\ViewAnimals.Designer.cs">
       <DependentUpon>ViewAnimals.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ViewCorm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ViewCorm.Designer.cs">
+      <DependentUpon>ViewCorm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\ViewSotr.cs">
       <SubType>Form</SubType>
@@ -96,14 +144,38 @@
     <EmbeddedResource Include="Forms\DirectorForm.resx">
       <DependentUpon>DirectorForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EditAnimals.resx">
+      <DependentUpon>EditAnimals.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EditBolezni.resx">
+      <DependentUpon>EditBolezni.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EditCorm.resx">
+      <DependentUpon>EditCorm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EditPotomstvo.resx">
+      <DependentUpon>EditPotomstvo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EditSotr.resx">
+      <DependentUpon>EditSotr.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\SotrForm.resx">
       <DependentUpon>SotrForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\VetForm.resx">
       <DependentUpon>VetForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AllAnimals.resx">
+      <DependentUpon>AllAnimals.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AllSotr.resx">
+      <DependentUpon>AllSotr.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\ViewAnimals.resx">
       <DependentUpon>ViewAnimals.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ViewCorm.resx">
+      <DependentUpon>ViewCorm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ViewSotr.resx">
       <DependentUpon>ViewSotr.cs</DependentUpon>
