@@ -26,6 +26,8 @@ namespace Zoo.Forms {
 
         private void EditPotomstvo_Load(object sender, EventArgs e)
         {
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "zooDataSet.Jivotnoe". При необходимости она может быть перемещена или удалена.
+            this.jivotnoeTableAdapter.Fill(this.zooDataSet.Jivotnoe);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "zooDataSet.Potomstvo". При необходимости она может быть перемещена или удалена.
             this.potomstvoTableAdapter.Fill(this.zooDataSet.Potomstvo);
 

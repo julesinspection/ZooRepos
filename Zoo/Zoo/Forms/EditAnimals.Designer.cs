@@ -27,7 +27,6 @@ namespace Zoo.Forms {
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditAnimals));
             System.Windows.Forms.Label nomerJivLabel;
             System.Windows.Forms.Label klichkaJivLabel;
             System.Windows.Forms.Label nomerValeraLabel;
@@ -35,22 +34,24 @@ namespace Zoo.Forms {
             System.Windows.Forms.Label polJivotnogoLabel;
             System.Windows.Forms.Label vozrastJivotnogoLabel;
             System.Windows.Forms.Label nomerKormaLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditAnimals));
             this.zooDataSet = new Zoo.ZooDataSet();
             this.jivotnoeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.jivotnoeTableAdapter = new Zoo.ZooDataSetTableAdapters.JivotnoeTableAdapter();
             this.tableAdapterManager = new Zoo.ZooDataSetTableAdapters.TableAdapterManager();
+            this.kormTableAdapter = new Zoo.ZooDataSetTableAdapters.KormTableAdapter();
             this.jivotnoeBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.jivotnoeBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.nomerJivTextBox = new System.Windows.Forms.TextBox();
             this.klichkaJivTextBox = new System.Windows.Forms.TextBox();
@@ -60,7 +61,6 @@ namespace Zoo.Forms {
             this.vozrastJivotnogoTextBox = new System.Windows.Forms.TextBox();
             this.nomerKormaComboBox = new System.Windows.Forms.ComboBox();
             this.kormBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.kormTableAdapter = new Zoo.ZooDataSetTableAdapters.KormTableAdapter();
             nomerJivLabel = new System.Windows.Forms.Label();
             klichkaJivLabel = new System.Windows.Forms.Label();
             nomerValeraLabel = new System.Windows.Forms.Label();
@@ -74,6 +74,76 @@ namespace Zoo.Forms {
             this.jivotnoeBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kormBindingSource)).BeginInit();
             this.SuspendLayout();
+            // 
+            // nomerJivLabel
+            // 
+            nomerJivLabel.AutoSize = true;
+            nomerJivLabel.Location = new System.Drawing.Point(104, 36);
+            nomerJivLabel.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            nomerJivLabel.Name = "nomerJivLabel";
+            nomerJivLabel.Size = new System.Drawing.Size(69, 20);
+            nomerJivLabel.TabIndex = 1;
+            nomerJivLabel.Text = "Номер:";
+            // 
+            // klichkaJivLabel
+            // 
+            klichkaJivLabel.AutoSize = true;
+            klichkaJivLabel.Location = new System.Drawing.Point(98, 76);
+            klichkaJivLabel.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            klichkaJivLabel.Name = "klichkaJivLabel";
+            klichkaJivLabel.Size = new System.Drawing.Size(75, 20);
+            klichkaJivLabel.TabIndex = 3;
+            klichkaJivLabel.Text = "Кличка:";
+            // 
+            // nomerValeraLabel
+            // 
+            nomerValeraLabel.AutoSize = true;
+            nomerValeraLabel.Location = new System.Drawing.Point(28, 116);
+            nomerValeraLabel.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            nomerValeraLabel.Name = "nomerValeraLabel";
+            nomerValeraLabel.Size = new System.Drawing.Size(145, 20);
+            nomerValeraLabel.TabIndex = 5;
+            nomerValeraLabel.Text = "Номер вальера:";
+            // 
+            // vidJivotnogoLabel
+            // 
+            vidJivotnogoLabel.AutoSize = true;
+            vidJivotnogoLabel.Location = new System.Drawing.Point(125, 156);
+            vidJivotnogoLabel.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            vidJivotnogoLabel.Name = "vidJivotnogoLabel";
+            vidJivotnogoLabel.Size = new System.Drawing.Size(48, 20);
+            vidJivotnogoLabel.TabIndex = 7;
+            vidJivotnogoLabel.Text = "Вид:";
+            // 
+            // polJivotnogoLabel
+            // 
+            polJivotnogoLabel.AutoSize = true;
+            polJivotnogoLabel.Location = new System.Drawing.Point(125, 198);
+            polJivotnogoLabel.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            polJivotnogoLabel.Name = "polJivotnogoLabel";
+            polJivotnogoLabel.Size = new System.Drawing.Size(48, 20);
+            polJivotnogoLabel.TabIndex = 9;
+            polJivotnogoLabel.Text = "Пол:";
+            // 
+            // vozrastJivotnogoLabel
+            // 
+            vozrastJivotnogoLabel.AutoSize = true;
+            vozrastJivotnogoLabel.Location = new System.Drawing.Point(89, 238);
+            vozrastJivotnogoLabel.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            vozrastJivotnogoLabel.Name = "vozrastJivotnogoLabel";
+            vozrastJivotnogoLabel.Size = new System.Drawing.Size(84, 20);
+            vozrastJivotnogoLabel.TabIndex = 11;
+            vozrastJivotnogoLabel.Text = "Возраст:";
+            // 
+            // nomerKormaLabel
+            // 
+            nomerKormaLabel.AutoSize = true;
+            nomerKormaLabel.Location = new System.Drawing.Point(48, 280);
+            nomerKormaLabel.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            nomerKormaLabel.Name = "nomerKormaLabel";
+            nomerKormaLabel.Size = new System.Drawing.Size(125, 20);
+            nomerKormaLabel.TabIndex = 13;
+            nomerKormaLabel.Text = "Номер корма:";
             // 
             // zooDataSet
             // 
@@ -99,6 +169,10 @@ namespace Zoo.Forms {
             this.tableAdapterManager.RabotaSJivotnimTableAdapter = null;
             this.tableAdapterManager.SotrudnikTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = Zoo.ZooDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
+            // kormTableAdapter
+            // 
+            this.kormTableAdapter.ClearBeforeFill = true;
             // 
             // jivotnoeBindingNavigator
             // 
@@ -130,6 +204,31 @@ namespace Zoo.Forms {
             this.jivotnoeBindingNavigator.Size = new System.Drawing.Size(584, 25);
             this.jivotnoeBindingNavigator.TabIndex = 0;
             this.jivotnoeBindingNavigator.Text = "bindingNavigator1";
+            // 
+            // bindingNavigatorAddNewItem
+            // 
+            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
+            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
+            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorAddNewItem.Text = "Добавить";
+            // 
+            // bindingNavigatorCountItem
+            // 
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(43, 22);
+            this.bindingNavigatorCountItem.Text = "для {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "Общее число элементов";
+            // 
+            // bindingNavigatorDeleteItem
+            // 
+            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
+            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorDeleteItem.Text = "Удалить";
             // 
             // bindingNavigatorMoveFirstItem
             // 
@@ -163,17 +262,10 @@ namespace Zoo.Forms {
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Текущее положение";
             // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(43, 15);
-            this.bindingNavigatorCountItem.Text = "для {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Общее число элементов";
-            // 
             // bindingNavigatorSeparator1
             // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 6);
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
             // bindingNavigatorMoveNextItem
             // 
@@ -181,7 +273,7 @@ namespace Zoo.Forms {
             this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
             this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
             this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 20);
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorMoveNextItem.Text = "Переместить вперед";
             // 
             // bindingNavigatorMoveLastItem
@@ -190,168 +282,80 @@ namespace Zoo.Forms {
             this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
             this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
             this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 20);
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorMoveLastItem.Text = "Переместить в конец";
             // 
             // bindingNavigatorSeparator2
             // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 6);
-            // 
-            // bindingNavigatorAddNewItem
-            // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorAddNewItem.Text = "Добавить";
-            // 
-            // bindingNavigatorDeleteItem
-            // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 20);
-            this.bindingNavigatorDeleteItem.Text = "Удалить";
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
             // 
             // jivotnoeBindingNavigatorSaveItem
             // 
             this.jivotnoeBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.jivotnoeBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("jivotnoeBindingNavigatorSaveItem.Image")));
             this.jivotnoeBindingNavigatorSaveItem.Name = "jivotnoeBindingNavigatorSaveItem";
-            this.jivotnoeBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 23);
+            this.jivotnoeBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
             this.jivotnoeBindingNavigatorSaveItem.Text = "Сохранить данные";
             this.jivotnoeBindingNavigatorSaveItem.Click += new System.EventHandler(this.jivotnoeBindingNavigatorSaveItem_Click);
-            // 
-            // nomerJivLabel
-            // 
-            nomerJivLabel.AutoSize = true;
-            nomerJivLabel.Location = new System.Drawing.Point(104, 36);
-            nomerJivLabel.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            nomerJivLabel.Name = "nomerJivLabel";
-            nomerJivLabel.Size = new System.Drawing.Size(69, 20);
-            nomerJivLabel.TabIndex = 1;
-            nomerJivLabel.Text = "Номер:";
             // 
             // nomerJivTextBox
             // 
             this.nomerJivTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.jivotnoeBindingSource, "NomerJiv", true));
             this.nomerJivTextBox.Location = new System.Drawing.Point(183, 30);
-            this.nomerJivTextBox.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.nomerJivTextBox.Margin = new System.Windows.Forms.Padding(5);
             this.nomerJivTextBox.Name = "nomerJivTextBox";
             this.nomerJivTextBox.Size = new System.Drawing.Size(164, 26);
             this.nomerJivTextBox.TabIndex = 2;
-            // 
-            // klichkaJivLabel
-            // 
-            klichkaJivLabel.AutoSize = true;
-            klichkaJivLabel.Location = new System.Drawing.Point(98, 76);
-            klichkaJivLabel.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            klichkaJivLabel.Name = "klichkaJivLabel";
-            klichkaJivLabel.Size = new System.Drawing.Size(75, 20);
-            klichkaJivLabel.TabIndex = 3;
-            klichkaJivLabel.Text = "Кличка:";
             // 
             // klichkaJivTextBox
             // 
             this.klichkaJivTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.jivotnoeBindingSource, "KlichkaJiv", true));
             this.klichkaJivTextBox.Location = new System.Drawing.Point(183, 70);
-            this.klichkaJivTextBox.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.klichkaJivTextBox.Margin = new System.Windows.Forms.Padding(5);
             this.klichkaJivTextBox.Name = "klichkaJivTextBox";
             this.klichkaJivTextBox.Size = new System.Drawing.Size(164, 26);
             this.klichkaJivTextBox.TabIndex = 4;
-            // 
-            // nomerValeraLabel
-            // 
-            nomerValeraLabel.AutoSize = true;
-            nomerValeraLabel.Location = new System.Drawing.Point(28, 116);
-            nomerValeraLabel.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            nomerValeraLabel.Name = "nomerValeraLabel";
-            nomerValeraLabel.Size = new System.Drawing.Size(145, 20);
-            nomerValeraLabel.TabIndex = 5;
-            nomerValeraLabel.Text = "Номер вальера:";
             // 
             // nomerValeraTextBox
             // 
             this.nomerValeraTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.jivotnoeBindingSource, "NomerValera", true));
             this.nomerValeraTextBox.Location = new System.Drawing.Point(183, 110);
-            this.nomerValeraTextBox.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.nomerValeraTextBox.Margin = new System.Windows.Forms.Padding(5);
             this.nomerValeraTextBox.Name = "nomerValeraTextBox";
             this.nomerValeraTextBox.Size = new System.Drawing.Size(164, 26);
             this.nomerValeraTextBox.TabIndex = 6;
-            // 
-            // vidJivotnogoLabel
-            // 
-            vidJivotnogoLabel.AutoSize = true;
-            vidJivotnogoLabel.Location = new System.Drawing.Point(125, 156);
-            vidJivotnogoLabel.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            vidJivotnogoLabel.Name = "vidJivotnogoLabel";
-            vidJivotnogoLabel.Size = new System.Drawing.Size(48, 20);
-            vidJivotnogoLabel.TabIndex = 7;
-            vidJivotnogoLabel.Text = "Вид:";
             // 
             // vidJivotnogoTextBox
             // 
             this.vidJivotnogoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.jivotnoeBindingSource, "VidJivotnogo", true));
             this.vidJivotnogoTextBox.Location = new System.Drawing.Point(183, 150);
-            this.vidJivotnogoTextBox.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.vidJivotnogoTextBox.Margin = new System.Windows.Forms.Padding(5);
             this.vidJivotnogoTextBox.Name = "vidJivotnogoTextBox";
             this.vidJivotnogoTextBox.Size = new System.Drawing.Size(164, 26);
             this.vidJivotnogoTextBox.TabIndex = 8;
-            // 
-            // polJivotnogoLabel
-            // 
-            polJivotnogoLabel.AutoSize = true;
-            polJivotnogoLabel.Location = new System.Drawing.Point(125, 198);
-            polJivotnogoLabel.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            polJivotnogoLabel.Name = "polJivotnogoLabel";
-            polJivotnogoLabel.Size = new System.Drawing.Size(48, 20);
-            polJivotnogoLabel.TabIndex = 9;
-            polJivotnogoLabel.Text = "Пол:";
             // 
             // polJivotnogoComboBox
             // 
             this.polJivotnogoComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.jivotnoeBindingSource, "PolJivotnogo", true));
             this.polJivotnogoComboBox.FormattingEnabled = true;
             this.polJivotnogoComboBox.Items.AddRange(new object[] {
-            "м",
-            "ж"});
+            "самец",
+            "самка"});
             this.polJivotnogoComboBox.Location = new System.Drawing.Point(183, 190);
-            this.polJivotnogoComboBox.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.polJivotnogoComboBox.Margin = new System.Windows.Forms.Padding(5);
             this.polJivotnogoComboBox.Name = "polJivotnogoComboBox";
             this.polJivotnogoComboBox.Size = new System.Drawing.Size(199, 28);
             this.polJivotnogoComboBox.TabIndex = 10;
-            // 
-            // vozrastJivotnogoLabel
-            // 
-            vozrastJivotnogoLabel.AutoSize = true;
-            vozrastJivotnogoLabel.Location = new System.Drawing.Point(89, 238);
-            vozrastJivotnogoLabel.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            vozrastJivotnogoLabel.Name = "vozrastJivotnogoLabel";
-            vozrastJivotnogoLabel.Size = new System.Drawing.Size(84, 20);
-            vozrastJivotnogoLabel.TabIndex = 11;
-            vozrastJivotnogoLabel.Text = "Возраст:";
             // 
             // vozrastJivotnogoTextBox
             // 
             this.vozrastJivotnogoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.jivotnoeBindingSource, "VozrastJivotnogo", true));
             this.vozrastJivotnogoTextBox.Location = new System.Drawing.Point(183, 232);
-            this.vozrastJivotnogoTextBox.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.vozrastJivotnogoTextBox.Margin = new System.Windows.Forms.Padding(5);
             this.vozrastJivotnogoTextBox.Name = "vozrastJivotnogoTextBox";
             this.vozrastJivotnogoTextBox.Size = new System.Drawing.Size(164, 26);
             this.vozrastJivotnogoTextBox.TabIndex = 12;
-            // 
-            // nomerKormaLabel
-            // 
-            nomerKormaLabel.AutoSize = true;
-            nomerKormaLabel.Location = new System.Drawing.Point(48, 280);
-            nomerKormaLabel.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            nomerKormaLabel.Name = "nomerKormaLabel";
-            nomerKormaLabel.Size = new System.Drawing.Size(125, 20);
-            nomerKormaLabel.TabIndex = 13;
-            nomerKormaLabel.Text = "Номер корма:";
             // 
             // nomerKormaComboBox
             // 
@@ -361,7 +365,7 @@ namespace Zoo.Forms {
             this.nomerKormaComboBox.DisplayMember = "NazvanieKorma";
             this.nomerKormaComboBox.FormattingEnabled = true;
             this.nomerKormaComboBox.Location = new System.Drawing.Point(183, 272);
-            this.nomerKormaComboBox.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.nomerKormaComboBox.Margin = new System.Windows.Forms.Padding(5);
             this.nomerKormaComboBox.Name = "nomerKormaComboBox";
             this.nomerKormaComboBox.Size = new System.Drawing.Size(199, 28);
             this.nomerKormaComboBox.TabIndex = 14;
@@ -370,10 +374,6 @@ namespace Zoo.Forms {
             // 
             this.kormBindingSource.DataMember = "Korm";
             this.kormBindingSource.DataSource = this.zooDataSet;
-            // 
-            // kormTableAdapter
-            // 
-            this.kormTableAdapter.ClearBeforeFill = true;
             // 
             // EditAnimals
             // 
@@ -396,7 +396,7 @@ namespace Zoo.Forms {
             this.Controls.Add(this.nomerJivTextBox);
             this.Controls.Add(this.jivotnoeBindingNavigator);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.MaximizeBox = false;
             this.Name = "EditAnimals";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

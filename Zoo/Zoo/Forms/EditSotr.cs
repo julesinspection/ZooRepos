@@ -17,10 +17,23 @@ namespace Zoo.Forms {
 
         private void sotrudnikBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
-            this.Validate();
-            this.sotrudnikBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.zooDataSet);
-            MessageBox.Show("Данные о сотруднике сохранены");
+            bool f = true;
+            try {
+                int check1 = Convert.ToInt32(vozrastTextBox.Text);
+                int check2 = Convert.ToInt32(stajTextBox.Text);
+            }
+            catch (FormatException) {
+                MessageBox.Show("Вы ввели символ! Пожалуйста, введите цифрy");
+                f = false;
+            }
+            finally {
+                if (f == true) {
+                    this.Validate();
+                    this.sotrudnikBindingSource.EndEdit();
+                    this.tableAdapterManager.UpdateAll(this.zooDataSet);
+                    MessageBox.Show("Данные о сотруднике сохранены");
+                }
+            }
 
         }
 

@@ -27,21 +27,22 @@ namespace Zoo.Forms {
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewCorm));
             System.Windows.Forms.Label cenaLabel;
             System.Windows.Forms.Label postavwikLabel;
             System.Windows.Forms.Label nazvanieKormaLabel;
             System.Windows.Forms.Label nomerKormaLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewCorm));
             this.zooDataSet = new Zoo.ZooDataSet();
             this.kormBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.kormTableAdapter = new Zoo.ZooDataSetTableAdapters.KormTableAdapter();
             this.tableAdapterManager = new Zoo.ZooDataSetTableAdapters.TableAdapterManager();
+            this.jivotnoeTableAdapter = new Zoo.ZooDataSetTableAdapters.JivotnoeTableAdapter();
             this.kormBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
@@ -51,15 +52,12 @@ namespace Zoo.Forms {
             this.nazvanieKormaTextBox = new System.Windows.Forms.TextBox();
             this.nomerKormaTextBox = new System.Windows.Forms.TextBox();
             this.jivotnoeBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.jivotnoeTableAdapter = new Zoo.ZooDataSetTableAdapters.JivotnoeTableAdapter();
             this.jivotnoeDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             cenaLabel = new System.Windows.Forms.Label();
             postavwikLabel = new System.Windows.Forms.Label();
             nazvanieKormaLabel = new System.Windows.Forms.Label();
@@ -71,6 +69,42 @@ namespace Zoo.Forms {
             ((System.ComponentModel.ISupportInitialize)(this.jivotnoeBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.jivotnoeDataGridView)).BeginInit();
             this.SuspendLayout();
+            // 
+            // cenaLabel
+            // 
+            cenaLabel.AutoSize = true;
+            cenaLabel.Location = new System.Drawing.Point(58, 130);
+            cenaLabel.Name = "cenaLabel";
+            cenaLabel.Size = new System.Drawing.Size(57, 20);
+            cenaLabel.TabIndex = 15;
+            cenaLabel.Text = "Цена:";
+            // 
+            // postavwikLabel
+            // 
+            postavwikLabel.AutoSize = true;
+            postavwikLabel.Location = new System.Drawing.Point(6, 98);
+            postavwikLabel.Name = "postavwikLabel";
+            postavwikLabel.Size = new System.Drawing.Size(109, 20);
+            postavwikLabel.TabIndex = 13;
+            postavwikLabel.Text = "Поставщик:";
+            // 
+            // nazvanieKormaLabel
+            // 
+            nazvanieKormaLabel.AutoSize = true;
+            nazvanieKormaLabel.Location = new System.Drawing.Point(19, 66);
+            nazvanieKormaLabel.Name = "nazvanieKormaLabel";
+            nazvanieKormaLabel.Size = new System.Drawing.Size(96, 20);
+            nazvanieKormaLabel.TabIndex = 11;
+            nazvanieKormaLabel.Text = "Название:";
+            // 
+            // nomerKormaLabel
+            // 
+            nomerKormaLabel.AutoSize = true;
+            nomerKormaLabel.Location = new System.Drawing.Point(46, 34);
+            nomerKormaLabel.Name = "nomerKormaLabel";
+            nomerKormaLabel.Size = new System.Drawing.Size(69, 20);
+            nomerKormaLabel.TabIndex = 9;
+            nomerKormaLabel.Text = "Номер:";
             // 
             // zooDataSet
             // 
@@ -96,6 +130,10 @@ namespace Zoo.Forms {
             this.tableAdapterManager.RabotaSJivotnimTableAdapter = null;
             this.tableAdapterManager.SotrudnikTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = Zoo.ZooDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
+            // jivotnoeTableAdapter
+            // 
+            this.jivotnoeTableAdapter.ClearBeforeFill = true;
             // 
             // kormBindingNavigator
             // 
@@ -124,6 +162,13 @@ namespace Zoo.Forms {
             this.kormBindingNavigator.Size = new System.Drawing.Size(1093, 25);
             this.kormBindingNavigator.TabIndex = 0;
             this.kormBindingNavigator.Text = "bindingNavigator1";
+            // 
+            // bindingNavigatorCountItem
+            // 
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(43, 22);
+            this.bindingNavigatorCountItem.Text = "для {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "Общее число элементов";
             // 
             // bindingNavigatorMoveFirstItem
             // 
@@ -157,16 +202,9 @@ namespace Zoo.Forms {
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Текущее положение";
             // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(43, 22);
-            this.bindingNavigatorCountItem.Text = "для {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Общее число элементов";
-            // 
             // bindingNavigatorSeparator1
             // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
             this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
             // bindingNavigatorMoveNextItem
@@ -189,17 +227,8 @@ namespace Zoo.Forms {
             // 
             // bindingNavigatorSeparator2
             // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
-            // 
-            // cenaLabel
-            // 
-            cenaLabel.AutoSize = true;
-            cenaLabel.Location = new System.Drawing.Point(58, 130);
-            cenaLabel.Name = "cenaLabel";
-            cenaLabel.Size = new System.Drawing.Size(57, 20);
-            cenaLabel.TabIndex = 15;
-            cenaLabel.Text = "Цена:";
             // 
             // cenaTextBox
             // 
@@ -210,15 +239,6 @@ namespace Zoo.Forms {
             this.cenaTextBox.Size = new System.Drawing.Size(100, 26);
             this.cenaTextBox.TabIndex = 16;
             // 
-            // postavwikLabel
-            // 
-            postavwikLabel.AutoSize = true;
-            postavwikLabel.Location = new System.Drawing.Point(6, 98);
-            postavwikLabel.Name = "postavwikLabel";
-            postavwikLabel.Size = new System.Drawing.Size(109, 20);
-            postavwikLabel.TabIndex = 13;
-            postavwikLabel.Text = "Поставщик:";
-            // 
             // postavwikTextBox
             // 
             this.postavwikTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.kormBindingSource, "Postavwik", true));
@@ -228,15 +248,6 @@ namespace Zoo.Forms {
             this.postavwikTextBox.Size = new System.Drawing.Size(194, 26);
             this.postavwikTextBox.TabIndex = 14;
             // 
-            // nazvanieKormaLabel
-            // 
-            nazvanieKormaLabel.AutoSize = true;
-            nazvanieKormaLabel.Location = new System.Drawing.Point(19, 66);
-            nazvanieKormaLabel.Name = "nazvanieKormaLabel";
-            nazvanieKormaLabel.Size = new System.Drawing.Size(96, 20);
-            nazvanieKormaLabel.TabIndex = 11;
-            nazvanieKormaLabel.Text = "Название:";
-            // 
             // nazvanieKormaTextBox
             // 
             this.nazvanieKormaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.kormBindingSource, "NazvanieKorma", true));
@@ -245,15 +256,6 @@ namespace Zoo.Forms {
             this.nazvanieKormaTextBox.ReadOnly = true;
             this.nazvanieKormaTextBox.Size = new System.Drawing.Size(194, 26);
             this.nazvanieKormaTextBox.TabIndex = 12;
-            // 
-            // nomerKormaLabel
-            // 
-            nomerKormaLabel.AutoSize = true;
-            nomerKormaLabel.Location = new System.Drawing.Point(46, 34);
-            nomerKormaLabel.Name = "nomerKormaLabel";
-            nomerKormaLabel.Size = new System.Drawing.Size(69, 20);
-            nomerKormaLabel.TabIndex = 9;
-            nomerKormaLabel.Text = "Номер:";
             // 
             // nomerKormaTextBox
             // 
@@ -269,12 +271,10 @@ namespace Zoo.Forms {
             this.jivotnoeBindingSource.DataMember = "FK__Jivotnoe__NomerK__300424B4";
             this.jivotnoeBindingSource.DataSource = this.kormBindingSource;
             // 
-            // jivotnoeTableAdapter
-            // 
-            this.jivotnoeTableAdapter.ClearBeforeFill = true;
-            // 
             // jivotnoeDataGridView
             // 
+            this.jivotnoeDataGridView.AllowUserToAddRows = false;
+            this.jivotnoeDataGridView.AllowUserToDeleteRows = false;
             this.jivotnoeDataGridView.AutoGenerateColumns = false;
             this.jivotnoeDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.jivotnoeDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -282,56 +282,44 @@ namespace Zoo.Forms {
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5,
-            this.dataGridViewTextBoxColumn6,
-            this.dataGridViewTextBoxColumn7});
+            this.dataGridViewTextBoxColumn5});
             this.jivotnoeDataGridView.DataSource = this.jivotnoeBindingSource;
             this.jivotnoeDataGridView.Location = new System.Drawing.Point(321, 28);
             this.jivotnoeDataGridView.Name = "jivotnoeDataGridView";
-            this.jivotnoeDataGridView.Size = new System.Drawing.Size(761, 220);
+            this.jivotnoeDataGridView.ReadOnly = true;
+            this.jivotnoeDataGridView.Size = new System.Drawing.Size(760, 220);
             this.jivotnoeDataGridView.TabIndex = 16;
             // 
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.DataPropertyName = "NomerJiv";
-            this.dataGridViewTextBoxColumn1.HeaderText = "NomerJiv";
+            this.dataGridViewTextBoxColumn1.HeaderText = "№ жив.";
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             // 
             // dataGridViewTextBoxColumn2
             // 
             this.dataGridViewTextBoxColumn2.DataPropertyName = "KlichkaJiv";
-            this.dataGridViewTextBoxColumn2.HeaderText = "KlichkaJiv";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Кличка";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             // 
             // dataGridViewTextBoxColumn3
             // 
             this.dataGridViewTextBoxColumn3.DataPropertyName = "NomerValera";
-            this.dataGridViewTextBoxColumn3.HeaderText = "NomerValera";
+            this.dataGridViewTextBoxColumn3.HeaderText = "№ вальера";
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             // 
             // dataGridViewTextBoxColumn4
             // 
             this.dataGridViewTextBoxColumn4.DataPropertyName = "VidJivotnogo";
-            this.dataGridViewTextBoxColumn4.HeaderText = "VidJivotnogo";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Вид";
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.Width = 300;
             // 
             // dataGridViewTextBoxColumn5
             // 
             this.dataGridViewTextBoxColumn5.DataPropertyName = "PolJivotnogo";
-            this.dataGridViewTextBoxColumn5.HeaderText = "PolJivotnogo";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Пол";
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "VozrastJivotnogo";
-            this.dataGridViewTextBoxColumn6.HeaderText = "VozrastJivotnogo";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "NomerKorma";
-            this.dataGridViewTextBoxColumn7.HeaderText = "NomerKorma";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
             // 
             // ViewCorm
             // 
@@ -349,7 +337,7 @@ namespace Zoo.Forms {
             this.Controls.Add(this.nomerKormaTextBox);
             this.Controls.Add(this.kormBindingNavigator);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.MaximizeBox = false;
             this.Name = "ViewCorm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -395,7 +383,5 @@ namespace Zoo.Forms {
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
     }
 }

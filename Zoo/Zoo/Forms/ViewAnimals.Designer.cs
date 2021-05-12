@@ -27,7 +27,6 @@ namespace Zoo.Forms {
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewAnimals));
             System.Windows.Forms.Label nomerKormaLabel;
             System.Windows.Forms.Label vozrastJivotnogoLabel;
             System.Windows.Forms.Label polJivotnogoLabel;
@@ -35,16 +34,20 @@ namespace Zoo.Forms {
             System.Windows.Forms.Label nomerValeraLabel;
             System.Windows.Forms.Label klichkaJivLabel;
             System.Windows.Forms.Label nomerJivLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewAnimals));
             this.zooDataSet = new Zoo.ZooDataSet();
             this.jivotnoeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.jivotnoeTableAdapter = new Zoo.ZooDataSetTableAdapters.JivotnoeTableAdapter();
             this.tableAdapterManager = new Zoo.ZooDataSetTableAdapters.TableAdapterManager();
+            this.kartochkaBolezneyTableAdapter = new Zoo.ZooDataSetTableAdapters.KartochkaBolezneyTableAdapter();
+            this.potomstvoTableAdapter = new Zoo.ZooDataSetTableAdapters.PotomstvoTableAdapter();
+            this.rabotaSJivotnimTableAdapter = new Zoo.ZooDataSetTableAdapters.RabotaSJivotnimTableAdapter();
             this.jivotnoeBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
@@ -57,34 +60,29 @@ namespace Zoo.Forms {
             this.polJivotnogoTextBox = new System.Windows.Forms.TextBox();
             this.nomerKormaTextBox = new System.Windows.Forms.TextBox();
             this.kartochkaBolezneyBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.kartochkaBolezneyTableAdapter = new Zoo.ZooDataSetTableAdapters.KartochkaBolezneyTableAdapter();
             this.rabotaSJivotnimBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.rabotaSJivotnimTableAdapter = new Zoo.ZooDataSetTableAdapters.RabotaSJivotnimTableAdapter();
             this.potomstvoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.potomstvoTableAdapter = new Zoo.ZooDataSetTableAdapters.PotomstvoTableAdapter();
             this.potomstvoBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
             this.kartochkaBolezneyDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.rabotaSJivotnimDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.potomstvoDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.potomstvoDataGridView1 = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.potomstvoDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             nomerKormaLabel = new System.Windows.Forms.Label();
             vozrastJivotnogoLabel = new System.Windows.Forms.Label();
             polJivotnogoLabel = new System.Windows.Forms.Label();
@@ -102,13 +100,83 @@ namespace Zoo.Forms {
             ((System.ComponentModel.ISupportInitialize)(this.potomstvoBindingSource1)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            this.tabPage2.SuspendLayout();
-            this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kartochkaBolezneyDataGridView)).BeginInit();
+            this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.rabotaSJivotnimDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.potomstvoDataGridView)).BeginInit();
+            this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.potomstvoDataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.potomstvoDataGridView)).BeginInit();
             this.SuspendLayout();
+            // 
+            // nomerKormaLabel
+            // 
+            nomerKormaLabel.AutoSize = true;
+            nomerKormaLabel.Location = new System.Drawing.Point(31, 280);
+            nomerKormaLabel.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            nomerKormaLabel.Name = "nomerKormaLabel";
+            nomerKormaLabel.Size = new System.Drawing.Size(125, 20);
+            nomerKormaLabel.TabIndex = 27;
+            nomerKormaLabel.Text = "Номер корма:";
+            // 
+            // vozrastJivotnogoLabel
+            // 
+            vozrastJivotnogoLabel.AutoSize = true;
+            vozrastJivotnogoLabel.Location = new System.Drawing.Point(72, 238);
+            vozrastJivotnogoLabel.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            vozrastJivotnogoLabel.Name = "vozrastJivotnogoLabel";
+            vozrastJivotnogoLabel.Size = new System.Drawing.Size(84, 20);
+            vozrastJivotnogoLabel.TabIndex = 25;
+            vozrastJivotnogoLabel.Text = "Возраст:";
+            // 
+            // polJivotnogoLabel
+            // 
+            polJivotnogoLabel.AutoSize = true;
+            polJivotnogoLabel.Location = new System.Drawing.Point(108, 198);
+            polJivotnogoLabel.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            polJivotnogoLabel.Name = "polJivotnogoLabel";
+            polJivotnogoLabel.Size = new System.Drawing.Size(48, 20);
+            polJivotnogoLabel.TabIndex = 23;
+            polJivotnogoLabel.Text = "Пол:";
+            // 
+            // vidJivotnogoLabel
+            // 
+            vidJivotnogoLabel.AutoSize = true;
+            vidJivotnogoLabel.Location = new System.Drawing.Point(108, 156);
+            vidJivotnogoLabel.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            vidJivotnogoLabel.Name = "vidJivotnogoLabel";
+            vidJivotnogoLabel.Size = new System.Drawing.Size(48, 20);
+            vidJivotnogoLabel.TabIndex = 21;
+            vidJivotnogoLabel.Text = "Вид:";
+            // 
+            // nomerValeraLabel
+            // 
+            nomerValeraLabel.AutoSize = true;
+            nomerValeraLabel.Location = new System.Drawing.Point(11, 116);
+            nomerValeraLabel.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            nomerValeraLabel.Name = "nomerValeraLabel";
+            nomerValeraLabel.Size = new System.Drawing.Size(145, 20);
+            nomerValeraLabel.TabIndex = 19;
+            nomerValeraLabel.Text = "Номер вальера:";
+            // 
+            // klichkaJivLabel
+            // 
+            klichkaJivLabel.AutoSize = true;
+            klichkaJivLabel.Location = new System.Drawing.Point(81, 76);
+            klichkaJivLabel.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            klichkaJivLabel.Name = "klichkaJivLabel";
+            klichkaJivLabel.Size = new System.Drawing.Size(75, 20);
+            klichkaJivLabel.TabIndex = 17;
+            klichkaJivLabel.Text = "Кличка:";
+            // 
+            // nomerJivLabel
+            // 
+            nomerJivLabel.AutoSize = true;
+            nomerJivLabel.Location = new System.Drawing.Point(87, 36);
+            nomerJivLabel.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            nomerJivLabel.Name = "nomerJivLabel";
+            nomerJivLabel.Size = new System.Drawing.Size(69, 20);
+            nomerJivLabel.TabIndex = 15;
+            nomerJivLabel.Text = "Номер:";
             // 
             // zooDataSet
             // 
@@ -134,6 +202,18 @@ namespace Zoo.Forms {
             this.tableAdapterManager.RabotaSJivotnimTableAdapter = this.rabotaSJivotnimTableAdapter;
             this.tableAdapterManager.SotrudnikTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = Zoo.ZooDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
+            // kartochkaBolezneyTableAdapter
+            // 
+            this.kartochkaBolezneyTableAdapter.ClearBeforeFill = true;
+            // 
+            // potomstvoTableAdapter
+            // 
+            this.potomstvoTableAdapter.ClearBeforeFill = true;
+            // 
+            // rabotaSJivotnimTableAdapter
+            // 
+            this.rabotaSJivotnimTableAdapter.ClearBeforeFill = true;
             // 
             // jivotnoeBindingNavigator
             // 
@@ -162,6 +242,13 @@ namespace Zoo.Forms {
             this.jivotnoeBindingNavigator.Size = new System.Drawing.Size(999, 25);
             this.jivotnoeBindingNavigator.TabIndex = 0;
             this.jivotnoeBindingNavigator.Text = "bindingNavigator1";
+            // 
+            // bindingNavigatorCountItem
+            // 
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(43, 22);
+            this.bindingNavigatorCountItem.Text = "для {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "Общее число элементов";
             // 
             // bindingNavigatorMoveFirstItem
             // 
@@ -196,16 +283,9 @@ namespace Zoo.Forms {
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Текущее положение";
             // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(43, 22);
-            this.bindingNavigatorCountItem.Text = "для {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Общее число элементов";
-            // 
             // bindingNavigatorSeparator1
             // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
             this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
             // bindingNavigatorMoveNextItem
@@ -228,28 +308,8 @@ namespace Zoo.Forms {
             // 
             // bindingNavigatorSeparator2
             // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
-            // 
-            // nomerKormaLabel
-            // 
-            nomerKormaLabel.AutoSize = true;
-            nomerKormaLabel.Location = new System.Drawing.Point(31, 280);
-            nomerKormaLabel.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            nomerKormaLabel.Name = "nomerKormaLabel";
-            nomerKormaLabel.Size = new System.Drawing.Size(125, 20);
-            nomerKormaLabel.TabIndex = 27;
-            nomerKormaLabel.Text = "Номер корма:";
-            // 
-            // vozrastJivotnogoLabel
-            // 
-            vozrastJivotnogoLabel.AutoSize = true;
-            vozrastJivotnogoLabel.Location = new System.Drawing.Point(72, 238);
-            vozrastJivotnogoLabel.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            vozrastJivotnogoLabel.Name = "vozrastJivotnogoLabel";
-            vozrastJivotnogoLabel.Size = new System.Drawing.Size(84, 20);
-            vozrastJivotnogoLabel.TabIndex = 25;
-            vozrastJivotnogoLabel.Text = "Возраст:";
             // 
             // vozrastJivotnogoTextBox
             // 
@@ -261,26 +321,6 @@ namespace Zoo.Forms {
             this.vozrastJivotnogoTextBox.Size = new System.Drawing.Size(164, 26);
             this.vozrastJivotnogoTextBox.TabIndex = 26;
             // 
-            // polJivotnogoLabel
-            // 
-            polJivotnogoLabel.AutoSize = true;
-            polJivotnogoLabel.Location = new System.Drawing.Point(108, 198);
-            polJivotnogoLabel.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            polJivotnogoLabel.Name = "polJivotnogoLabel";
-            polJivotnogoLabel.Size = new System.Drawing.Size(48, 20);
-            polJivotnogoLabel.TabIndex = 23;
-            polJivotnogoLabel.Text = "Пол:";
-            // 
-            // vidJivotnogoLabel
-            // 
-            vidJivotnogoLabel.AutoSize = true;
-            vidJivotnogoLabel.Location = new System.Drawing.Point(108, 156);
-            vidJivotnogoLabel.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            vidJivotnogoLabel.Name = "vidJivotnogoLabel";
-            vidJivotnogoLabel.Size = new System.Drawing.Size(48, 20);
-            vidJivotnogoLabel.TabIndex = 21;
-            vidJivotnogoLabel.Text = "Вид:";
-            // 
             // vidJivotnogoTextBox
             // 
             this.vidJivotnogoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.jivotnoeBindingSource, "VidJivotnogo", true));
@@ -290,16 +330,6 @@ namespace Zoo.Forms {
             this.vidJivotnogoTextBox.ReadOnly = true;
             this.vidJivotnogoTextBox.Size = new System.Drawing.Size(164, 26);
             this.vidJivotnogoTextBox.TabIndex = 22;
-            // 
-            // nomerValeraLabel
-            // 
-            nomerValeraLabel.AutoSize = true;
-            nomerValeraLabel.Location = new System.Drawing.Point(11, 116);
-            nomerValeraLabel.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            nomerValeraLabel.Name = "nomerValeraLabel";
-            nomerValeraLabel.Size = new System.Drawing.Size(145, 20);
-            nomerValeraLabel.TabIndex = 19;
-            nomerValeraLabel.Text = "Номер вальера:";
             // 
             // nomerValeraTextBox
             // 
@@ -311,16 +341,6 @@ namespace Zoo.Forms {
             this.nomerValeraTextBox.Size = new System.Drawing.Size(164, 26);
             this.nomerValeraTextBox.TabIndex = 20;
             // 
-            // klichkaJivLabel
-            // 
-            klichkaJivLabel.AutoSize = true;
-            klichkaJivLabel.Location = new System.Drawing.Point(81, 76);
-            klichkaJivLabel.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            klichkaJivLabel.Name = "klichkaJivLabel";
-            klichkaJivLabel.Size = new System.Drawing.Size(75, 20);
-            klichkaJivLabel.TabIndex = 17;
-            klichkaJivLabel.Text = "Кличка:";
-            // 
             // klichkaJivTextBox
             // 
             this.klichkaJivTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.jivotnoeBindingSource, "KlichkaJiv", true));
@@ -330,16 +350,6 @@ namespace Zoo.Forms {
             this.klichkaJivTextBox.ReadOnly = true;
             this.klichkaJivTextBox.Size = new System.Drawing.Size(164, 26);
             this.klichkaJivTextBox.TabIndex = 18;
-            // 
-            // nomerJivLabel
-            // 
-            nomerJivLabel.AutoSize = true;
-            nomerJivLabel.Location = new System.Drawing.Point(87, 36);
-            nomerJivLabel.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            nomerJivLabel.Name = "nomerJivLabel";
-            nomerJivLabel.Size = new System.Drawing.Size(69, 20);
-            nomerJivLabel.TabIndex = 15;
-            nomerJivLabel.Text = "Номер:";
             // 
             // nomerJivTextBox
             // 
@@ -374,27 +384,15 @@ namespace Zoo.Forms {
             this.kartochkaBolezneyBindingSource.DataMember = "FK__Kartochka__Nomer__36B12243";
             this.kartochkaBolezneyBindingSource.DataSource = this.jivotnoeBindingSource;
             // 
-            // kartochkaBolezneyTableAdapter
-            // 
-            this.kartochkaBolezneyTableAdapter.ClearBeforeFill = true;
-            // 
             // rabotaSJivotnimBindingSource
             // 
             this.rabotaSJivotnimBindingSource.DataMember = "FK__RabotaSJi__Nomer__32E0915F";
             this.rabotaSJivotnimBindingSource.DataSource = this.jivotnoeBindingSource;
             // 
-            // rabotaSJivotnimTableAdapter
-            // 
-            this.rabotaSJivotnimTableAdapter.ClearBeforeFill = true;
-            // 
             // potomstvoBindingSource
             // 
             this.potomstvoBindingSource.DataMember = "FK__Potomstvo__Nomer__398D8EEE";
             this.potomstvoBindingSource.DataSource = this.jivotnoeBindingSource;
-            // 
-            // potomstvoTableAdapter
-            // 
-            this.potomstvoTableAdapter.ClearBeforeFill = true;
             // 
             // potomstvoBindingSource1
             // 
@@ -425,6 +423,48 @@ namespace Zoo.Forms {
             this.tabPage1.Text = "Карточка болезней";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // kartochkaBolezneyDataGridView
+            // 
+            this.kartochkaBolezneyDataGridView.AllowUserToAddRows = false;
+            this.kartochkaBolezneyDataGridView.AllowUserToDeleteRows = false;
+            this.kartochkaBolezneyDataGridView.AutoGenerateColumns = false;
+            this.kartochkaBolezneyDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.kartochkaBolezneyDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3});
+            this.kartochkaBolezneyDataGridView.DataSource = this.kartochkaBolezneyBindingSource;
+            this.kartochkaBolezneyDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.kartochkaBolezneyDataGridView.Location = new System.Drawing.Point(3, 3);
+            this.kartochkaBolezneyDataGridView.Name = "kartochkaBolezneyDataGridView";
+            this.kartochkaBolezneyDataGridView.ReadOnly = true;
+            this.kartochkaBolezneyDataGridView.Size = new System.Drawing.Size(626, 521);
+            this.kartochkaBolezneyDataGridView.TabIndex = 0;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "NomerJiv";
+            this.dataGridViewTextBoxColumn1.HeaderText = "№";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Width = 50;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "NazvanieBolezni";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Название Болезни";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            this.dataGridViewTextBoxColumn2.Width = 200;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "DataZabolevaniya";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Дата заболевания";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            this.dataGridViewTextBoxColumn3.Width = 200;
+            // 
             // tabPage2
             // 
             this.tabPage2.AutoScroll = true;
@@ -436,6 +476,46 @@ namespace Zoo.Forms {
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Работа с животным";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // rabotaSJivotnimDataGridView
+            // 
+            this.rabotaSJivotnimDataGridView.AllowUserToAddRows = false;
+            this.rabotaSJivotnimDataGridView.AllowUserToDeleteRows = false;
+            this.rabotaSJivotnimDataGridView.AutoGenerateColumns = false;
+            this.rabotaSJivotnimDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.rabotaSJivotnimDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewTextBoxColumn6});
+            this.rabotaSJivotnimDataGridView.DataSource = this.rabotaSJivotnimBindingSource;
+            this.rabotaSJivotnimDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.rabotaSJivotnimDataGridView.Location = new System.Drawing.Point(3, 3);
+            this.rabotaSJivotnimDataGridView.Name = "rabotaSJivotnimDataGridView";
+            this.rabotaSJivotnimDataGridView.ReadOnly = true;
+            this.rabotaSJivotnimDataGridView.Size = new System.Drawing.Size(626, 521);
+            this.rabotaSJivotnimDataGridView.TabIndex = 0;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "NomerJiv";
+            this.dataGridViewTextBoxColumn4.HeaderText = "№ животного";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "NomerSotr";
+            this.dataGridViewTextBoxColumn5.HeaderText = "№ сотрудника";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "DataNachala";
+            this.dataGridViewTextBoxColumn6.HeaderText = "Дата начала работы";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.ReadOnly = true;
+            this.dataGridViewTextBoxColumn6.Width = 300;
             // 
             // tabPage3
             // 
@@ -451,135 +531,15 @@ namespace Zoo.Forms {
             this.tabPage3.Text = "Потомство";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
-            // kartochkaBolezneyDataGridView
+            // label2
             // 
-            this.kartochkaBolezneyDataGridView.AutoGenerateColumns = false;
-            this.kartochkaBolezneyDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.kartochkaBolezneyDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3});
-            this.kartochkaBolezneyDataGridView.DataSource = this.kartochkaBolezneyBindingSource;
-            this.kartochkaBolezneyDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.kartochkaBolezneyDataGridView.Location = new System.Drawing.Point(3, 3);
-            this.kartochkaBolezneyDataGridView.Name = "kartochkaBolezneyDataGridView";
-            this.kartochkaBolezneyDataGridView.Size = new System.Drawing.Size(626, 521);
-            this.kartochkaBolezneyDataGridView.TabIndex = 0;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "NomerJiv";
-            this.dataGridViewTextBoxColumn1.HeaderText = "NomerJiv";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "NazvanieBolezni";
-            this.dataGridViewTextBoxColumn2.HeaderText = "NazvanieBolezni";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "DataZabolevaniya";
-            this.dataGridViewTextBoxColumn3.HeaderText = "DataZabolevaniya";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            // 
-            // rabotaSJivotnimDataGridView
-            // 
-            this.rabotaSJivotnimDataGridView.AutoGenerateColumns = false;
-            this.rabotaSJivotnimDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.rabotaSJivotnimDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5,
-            this.dataGridViewTextBoxColumn6});
-            this.rabotaSJivotnimDataGridView.DataSource = this.rabotaSJivotnimBindingSource;
-            this.rabotaSJivotnimDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.rabotaSJivotnimDataGridView.Location = new System.Drawing.Point(3, 3);
-            this.rabotaSJivotnimDataGridView.Name = "rabotaSJivotnimDataGridView";
-            this.rabotaSJivotnimDataGridView.Size = new System.Drawing.Size(626, 521);
-            this.rabotaSJivotnimDataGridView.TabIndex = 0;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "NomerJiv";
-            this.dataGridViewTextBoxColumn4.HeaderText = "NomerJiv";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "NomerSotr";
-            this.dataGridViewTextBoxColumn5.HeaderText = "NomerSotr";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "DataNachala";
-            this.dataGridViewTextBoxColumn6.HeaderText = "DataNachala";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            // 
-            // potomstvoDataGridView
-            // 
-            this.potomstvoDataGridView.AutoGenerateColumns = false;
-            this.potomstvoDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.potomstvoDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn7,
-            this.dataGridViewTextBoxColumn8,
-            this.dataGridViewTextBoxColumn9});
-            this.potomstvoDataGridView.DataSource = this.potomstvoBindingSource;
-            this.potomstvoDataGridView.Location = new System.Drawing.Point(3, 44);
-            this.potomstvoDataGridView.Name = "potomstvoDataGridView";
-            this.potomstvoDataGridView.Size = new System.Drawing.Size(626, 220);
-            this.potomstvoDataGridView.TabIndex = 0;
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "NomerDet";
-            this.dataGridViewTextBoxColumn7.HeaderText = "NomerDet";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            this.dataGridViewTextBoxColumn8.DataPropertyName = "NomerJiv";
-            this.dataGridViewTextBoxColumn8.HeaderText = "NomerJiv";
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            // 
-            // dataGridViewTextBoxColumn9
-            // 
-            this.dataGridViewTextBoxColumn9.DataPropertyName = "DataZabolevaniya";
-            this.dataGridViewTextBoxColumn9.HeaderText = "DataZabolevaniya";
-            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
-            // 
-            // potomstvoDataGridView1
-            // 
-            this.potomstvoDataGridView1.AutoGenerateColumns = false;
-            this.potomstvoDataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.potomstvoDataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn10,
-            this.dataGridViewTextBoxColumn11,
-            this.dataGridViewTextBoxColumn12});
-            this.potomstvoDataGridView1.DataSource = this.potomstvoBindingSource1;
-            this.potomstvoDataGridView1.Location = new System.Drawing.Point(3, 298);
-            this.potomstvoDataGridView1.Name = "potomstvoDataGridView1";
-            this.potomstvoDataGridView1.Size = new System.Drawing.Size(626, 220);
-            this.potomstvoDataGridView1.TabIndex = 1;
-            // 
-            // dataGridViewTextBoxColumn10
-            // 
-            this.dataGridViewTextBoxColumn10.DataPropertyName = "NomerDet";
-            this.dataGridViewTextBoxColumn10.HeaderText = "NomerDet";
-            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
-            // 
-            // dataGridViewTextBoxColumn11
-            // 
-            this.dataGridViewTextBoxColumn11.DataPropertyName = "NomerJiv";
-            this.dataGridViewTextBoxColumn11.HeaderText = "NomerJiv";
-            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
-            // 
-            // dataGridViewTextBoxColumn12
-            // 
-            this.dataGridViewTextBoxColumn12.DataPropertyName = "DataZabolevaniya";
-            this.dataGridViewTextBoxColumn12.HeaderText = "DataZabolevaniya";
-            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
+            this.label2.Location = new System.Drawing.Point(3, 267);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(609, 28);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Потомки";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label2.UseMnemonic = false;
             // 
             // label1
             // 
@@ -591,15 +551,67 @@ namespace Zoo.Forms {
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label1.UseMnemonic = false;
             // 
-            // label2
+            // potomstvoDataGridView1
             // 
-            this.label2.Location = new System.Drawing.Point(3, 267);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(609, 28);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Потомки";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label2.UseMnemonic = false;
+            this.potomstvoDataGridView1.AllowUserToAddRows = false;
+            this.potomstvoDataGridView1.AllowUserToDeleteRows = false;
+            this.potomstvoDataGridView1.AutoGenerateColumns = false;
+            this.potomstvoDataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.potomstvoDataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn10,
+            this.dataGridViewTextBoxColumn12});
+            this.potomstvoDataGridView1.DataSource = this.potomstvoBindingSource1;
+            this.potomstvoDataGridView1.Location = new System.Drawing.Point(3, 298);
+            this.potomstvoDataGridView1.Name = "potomstvoDataGridView1";
+            this.potomstvoDataGridView1.ReadOnly = true;
+            this.potomstvoDataGridView1.Size = new System.Drawing.Size(626, 220);
+            this.potomstvoDataGridView1.TabIndex = 1;
+            // 
+            // dataGridViewTextBoxColumn10
+            // 
+            this.dataGridViewTextBoxColumn10.DataPropertyName = "NomerDet";
+            this.dataGridViewTextBoxColumn10.HeaderText = "№ потомка";
+            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            this.dataGridViewTextBoxColumn10.ReadOnly = true;
+            this.dataGridViewTextBoxColumn10.Width = 150;
+            // 
+            // dataGridViewTextBoxColumn12
+            // 
+            this.dataGridViewTextBoxColumn12.DataPropertyName = "DataZabolevaniya";
+            this.dataGridViewTextBoxColumn12.HeaderText = "Дата рождения";
+            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
+            this.dataGridViewTextBoxColumn12.ReadOnly = true;
+            // 
+            // potomstvoDataGridView
+            // 
+            this.potomstvoDataGridView.AllowUserToAddRows = false;
+            this.potomstvoDataGridView.AllowUserToDeleteRows = false;
+            this.potomstvoDataGridView.AutoGenerateColumns = false;
+            this.potomstvoDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.potomstvoDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn8,
+            this.dataGridViewTextBoxColumn9});
+            this.potomstvoDataGridView.DataSource = this.potomstvoBindingSource;
+            this.potomstvoDataGridView.Location = new System.Drawing.Point(3, 44);
+            this.potomstvoDataGridView.Name = "potomstvoDataGridView";
+            this.potomstvoDataGridView.ReadOnly = true;
+            this.potomstvoDataGridView.Size = new System.Drawing.Size(626, 220);
+            this.potomstvoDataGridView.TabIndex = 0;
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "NomerJiv";
+            this.dataGridViewTextBoxColumn8.HeaderText = "№ предка";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.ReadOnly = true;
+            this.dataGridViewTextBoxColumn8.Width = 150;
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            this.dataGridViewTextBoxColumn9.DataPropertyName = "DataZabolevaniya";
+            this.dataGridViewTextBoxColumn9.HeaderText = "Дата рождения";
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            this.dataGridViewTextBoxColumn9.ReadOnly = true;
             // 
             // ViewAnimals
             // 
@@ -623,7 +635,7 @@ namespace Zoo.Forms {
             this.Controls.Add(this.nomerJivTextBox);
             this.Controls.Add(this.jivotnoeBindingNavigator);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.MaximizeBox = false;
             this.Name = "ViewAnimals";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -640,12 +652,12 @@ namespace Zoo.Forms {
             ((System.ComponentModel.ISupportInitialize)(this.potomstvoBindingSource1)).EndInit();
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
-            this.tabPage2.ResumeLayout(false);
-            this.tabPage3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.kartochkaBolezneyDataGridView)).EndInit();
+            this.tabPage2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.rabotaSJivotnimDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.potomstvoDataGridView)).EndInit();
+            this.tabPage3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.potomstvoDataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.potomstvoDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -684,24 +696,22 @@ namespace Zoo.Forms {
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.DataGridView kartochkaBolezneyDataGridView;
+        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.DataGridView rabotaSJivotnimDataGridView;
+        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.DataGridView potomstvoDataGridView;
+        private System.Windows.Forms.DataGridView potomstvoDataGridView1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.DataGridView rabotaSJivotnimDataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.DataGridView potomstvoDataGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
-        private System.Windows.Forms.DataGridView potomstvoDataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
     }
 }

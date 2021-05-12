@@ -17,9 +17,22 @@ namespace Zoo.Forms {
 
         private void kormBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
-            this.Validate();
-            this.kormBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.zooDataSet);
+            bool f = true;
+            try {
+                int check1 = Convert.ToInt32(cenaTextBox.Text);
+            }
+            catch (FormatException) {
+                MessageBox.Show("Вы ввели символ! Пожалуйста, введите цифрy");
+                f = false;
+            }
+            finally {
+                if (f == true) {
+                    MessageBox.Show("Данные о корме сохранены");
+                    this.Validate();
+                    this.kormBindingSource.EndEdit();
+                    this.tableAdapterManager.UpdateAll(this.zooDataSet);
+                }
+            }
 
         }
 
