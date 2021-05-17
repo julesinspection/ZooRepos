@@ -257,6 +257,7 @@ namespace Zoo.Forms {
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "Положение";
             this.bindingNavigatorPositionItem.AutoSize = false;
+            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
             this.bindingNavigatorPositionItem.Text = "0";
@@ -360,15 +361,16 @@ namespace Zoo.Forms {
             // nomerKormaComboBox
             // 
             this.nomerKormaComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.jivotnoeBindingSource, "NomerKorma", true));
-            this.nomerKormaComboBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.kormBindingSource, "NomerKorma", true));
+            this.nomerKormaComboBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.jivotnoeBindingSource, "NomerKorma", true));
             this.nomerKormaComboBox.DataSource = this.kormBindingSource;
-            this.nomerKormaComboBox.DisplayMember = "NazvanieKorma";
+            this.nomerKormaComboBox.DisplayMember = "NomerKorma";
             this.nomerKormaComboBox.FormattingEnabled = true;
             this.nomerKormaComboBox.Location = new System.Drawing.Point(183, 272);
             this.nomerKormaComboBox.Margin = new System.Windows.Forms.Padding(5);
             this.nomerKormaComboBox.Name = "nomerKormaComboBox";
             this.nomerKormaComboBox.Size = new System.Drawing.Size(199, 28);
             this.nomerKormaComboBox.TabIndex = 14;
+            this.nomerKormaComboBox.ValueMember = "NomerKorma";
             // 
             // kormBindingSource
             // 
